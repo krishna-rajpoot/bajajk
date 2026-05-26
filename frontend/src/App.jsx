@@ -9,8 +9,8 @@ function App() {
   const [response, setResponse] = useState(null);
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  // Assuming the backend is running on the same host, port 3000 during dev
-  const API_URL = 'http://localhost:3000/bfhl';
+  // Use environment variable for API URL or fallback to localhost for dev
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/bfhl';
 
   const filterOptions = [
     { value: 'alphabets', label: 'Alphabets' },
