@@ -65,6 +65,10 @@ async function getFileDetails(base64String) {
     }
 }
 
+app.get('/', (req, res) => {
+    res.status(200).send('Bajaj Finserv Health Dev Challenge API is running. Use /bfhl for the API endpoints.');
+});
+
 app.get('/bfhl', (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
